@@ -3,7 +3,6 @@ from data_manager import DataManager
 import os
 
 class HMI:
-
     def print_welcome_message():
         os.system("cls" if os.name == "nt" else "clear")
         print("Welcome to the ISS tracker.")
