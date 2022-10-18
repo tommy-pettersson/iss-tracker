@@ -20,7 +20,7 @@ class HMI:
     
     def print_location():
         iss_data = DataManager.get_iss_location()
-        os.system("cls")
+        os.system("cls" if os.name == "nt" else "clear")
         print(f"Time: {iss_data['time']}")
         print(f"Latitude: {iss_data['latitude']}")
         print(f"Longitude: {iss_data['longitude']}")
@@ -30,6 +30,6 @@ class HMI:
         iss_data = DataManager.get_iss_location()
         coordinates = f"{iss_data['latitude']} {iss_data['longitude']}"
         pyperclip.copy(coordinates)
-        os.system("cls")
+        os.system("cls" if os.name == "nt" else "clear")
         print("Coordinates copied to clipboard.")
         print("")

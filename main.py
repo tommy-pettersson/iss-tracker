@@ -13,10 +13,10 @@ def main():
             case "C":
                 HMI.copy_coordinates()
             case "E":
-                os.system("cls")
+                os.system("cls" if os.name == "nt" else "clear")
                 break
             case _:
-                os.system("cls")
+                os.system("cls" if os.name == "nt" else "clear")
                 print("Not a valid option. Try again.")
                 print("")
 
